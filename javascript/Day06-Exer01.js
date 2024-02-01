@@ -3,5 +3,17 @@
 // chỉ mục của ký tự đầu tiên không lặp lại.
 
 function findNonRepeatingCharacter(string){
-    //write code here
+    let repeat;
+    for(let i=0;i<string.length;i++){
+        repeat = false;
+        for(let j=0;j<string.length;j++){
+            if(string[i]===string[j] && i!==j){
+                repeat=true;
+            }
+        }
+        if(repeat === false){
+            return i;
+        }
+    }
+    return null;
 }
